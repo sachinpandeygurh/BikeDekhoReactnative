@@ -55,7 +55,8 @@ const Detail = (props) => {
       <FontAwesome name={isHeart? "heart": ""}   color={heartSize>=165? "green" : "red"}size={heartSize} />
     </View>
 
-      <Image source={require("../img/2.png")} style={styles.img} /> // i will use uri for this Image compoenent 
+      <Image source={require("../img/2.png")} style={styles.img} />
+       {/* // i will use uri for this Image compoenent  */}
       <View style={styles.cont3}>
         <ScrollView style={{paddingTop: 0 , paddingBottom: 0}}>
         <Text style={styles.title}>Maxx Scooter</Text>

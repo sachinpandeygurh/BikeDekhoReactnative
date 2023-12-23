@@ -12,7 +12,8 @@ const HomeStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Detail" component={Detail} /> // i will send uri in here 
+      <Stack.Screen name="Detail" component={Detail} /> 
+      {/* // i will send uri in here  */}
     </Stack.Navigator>
   );
 };
