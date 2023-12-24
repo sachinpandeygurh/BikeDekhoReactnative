@@ -6,9 +6,9 @@ import {
   View,
   SectionList,
   SafeAreaView,
-  Image,
+  // Image,
   FlatList,
-  Button,
+  // Button,
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
@@ -28,11 +28,11 @@ const loadFonts = async () => {
     Montserrat_600SemiBold,
   });
 };
-const HandleDetails =(uri)=>{
+const HandleDetails = (uri) => {
   props.navigation.navigate("Detail", { uri: uri });
   console.log(uri);
-}
-const ListItem = ({ item , navigation }) => {
+};
+const ListItem = ({ item, navigation }) => {
   // console.log(item.uri);
   return (
     <View style={styles.item}>
@@ -43,12 +43,20 @@ const ListItem = ({ item , navigation }) => {
       >
         <TouchableOpacity
           style={{ position: "relative" }}
-          onPress={()=>HandleDetails(item.uri , navigation)}
+          onPress={() => HandleDetails(item.uri, navigation)}
         >
-          <View style={{  position: "absolute", display:"flex", flex: 1 , top: 200, paddingHorizontal: 20}}>
-        <Text style={styles.title}>{item.text}</Text>
+          <View
+            style={{
+              position: "absolute",
+              display: "flex",
+              flex: 1,
+              top: 200,
+              paddingHorizontal: 20,
+            }}
+          >
+            <Text style={styles.title}>{item.text}</Text>
 
-          <Text style={styles.details}> View more details</Text>
+            {/* <Text style={styles.details}> View more details</Text> */}
           </View>
         </TouchableOpacity>
       </ImageBackground>
@@ -56,7 +64,7 @@ const ListItem = ({ item , navigation }) => {
   );
 };
 
-export const ItemsList = ({navigation}) => {
+export const ItemsList = ({ navigation }) => {
   useEffect(() => {
     loadFonts();
   }, []);
@@ -85,7 +93,7 @@ export const ItemsList = ({navigation}) => {
             if (section.horizontal) {
               return null;
             }
-            return <ListItem item={item}  navigation={navigation}/>;
+            return <ListItem item={item} navigation={navigation} />;
           }}
         />
       </SafeAreaView>
@@ -171,8 +179,7 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat_700Bold",
     fontSize: 20,
     marginTop: 20,
-    // textAlign: "center",
-  
+    textAlign: "center",
   },
   details: {
     borderColor: "red",
@@ -183,9 +190,9 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     alignSelf: "center",
     opacity: 0.5,
-  position: "absolute",
-  top: 20,
-  right: -150,
-  width: 150
+    position: "absolute",
+    top: 20,
+    right: -150,
+    width: 150,
   },
 });

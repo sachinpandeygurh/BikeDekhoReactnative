@@ -30,9 +30,9 @@ const Detail = (props) => {
     if (isHeart) {
       const intervalId = setInterval(() => {
         setHeartSize((prevSize) => Math.max(prevSize + 5, 40)); 
+        loadFonts()
       }, 150);
 
-     
       setTimeout(() => {
         clearInterval(intervalId);
       }, 4000); 
@@ -56,7 +56,6 @@ const Detail = (props) => {
     </View>
 
       <Image source={require("../img/2.png")} style={styles.img} />
-       {/* // i will use uri for this Image compoenent  */}
       <View style={styles.cont3}>
         <ScrollView style={{paddingTop: 0 , paddingBottom: 0}}>
         <Text style={styles.title}>Maxx Scooter</Text>

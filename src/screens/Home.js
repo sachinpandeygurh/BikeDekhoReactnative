@@ -25,7 +25,6 @@ const Home = (props) => {
     <Text style={styles.detail}>
         With an updated motor, and integrated anti-theft tech the maxx scooters
         are custom-tuned for the ultimate riding experience.
-        With an updated motor, and integrated anti-theft tech the maxx scooters
       </Text>
       <TouchableOpacity
         style={styles.btn}
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems:"center"
   },
   btn: {
-    marginTop: 40,
+    // marginTop: 40,
     marginBottom:10,
     backgroundColor: "#E2443B",
     paddingHorizontal: 140,
