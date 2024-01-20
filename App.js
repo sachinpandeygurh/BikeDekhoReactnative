@@ -19,11 +19,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      {isSplashVisible ? (
-        <SplashScreen />
-      ) : (
-        <HomeStackNavigator />
-      )}
+    <HomeStackNavigator />
     </NavigationContainer>
   );
 }

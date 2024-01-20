@@ -1,0 +1,12 @@
+{/* <ItemsList navigation={props.navigation}/> 
+    <Text style={styles.title}>About Company</Text> 
+    <Text style={styles.detail}>
+        With an updated motor, and integrated anti-theft tech the maxx scooters
+        are custom-tuned for the ultimate riding experience.
+      </Text>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => props.navigation.navigate("Detail")}
+      >
+        <Text style={styles.text}>Next</Text>
+      </TouchableOpacity> */}

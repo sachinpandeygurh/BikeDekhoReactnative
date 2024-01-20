@@ -25,7 +25,7 @@ const loadFonts = async () => {
   await Font.loadAsync({
     Montserrat_700Bold,
     Montserrat_400Regular,
-    Montserrat_600SemiBold,
+    Montserrat_600SemiBold, 
   });
 };
 const HandleDetails = (uri) => {
@@ -34,6 +34,9 @@ const HandleDetails = (uri) => {
 };
 const ListItem = ({ item, navigation }) => {
   // console.log(item.uri);
+  useEffect(() => {
+    loadFonts();
+  }, []);
   return (
     <View style={styles.item}>
       <ImageBackground
