@@ -1,7 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
 import Mobile from "./SubCategoury/mobile";
+import Fashion from "./SubCategoury/Fashion";
+import HomenDecor from "./SubCategoury/HomenDcor";
+import Appliances from "./SubCategoury/Appliances";
+import Electronics from "./SubCategoury/Electronics";
+import Grocery from "./SubCategoury/Grocery";
 
 export default function SubCategoury() {
   const categoryItems = [
@@ -12,63 +16,22 @@ export default function SubCategoury() {
     { id: 3, img: require("../img/HomeDecor.jpg"), name: "Home & Decor" },
     { id: 5, img: require("../img/HealthBeauty.jpg"), name: "Health & Beauty" },
     { id: 6, img: require("../img/Appliances.jpg"), name: "Appliances" },
-    { id: 100, img: require("../img/home-category-48.png"), name: "All Categories"},
+    {
+      id: 100,
+      img: require("../img/home-category-48.png"),
+      name: "All Categories",
+    },
   ];
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.customText}>Mobile</Text>
-        <Text style={styles.customText}>
-          <AntDesign name="down" size={24} color="black" />
-        </Text>
-      </View>
-<Mobile/>
+    <View>
+      <Mobile />
+      <Fashion />
+      <HomenDecor />
+      <Appliances/>
+      <Grocery/>
+      <Electronics/>
+      
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#fff",
-    paddingVertical: 15,
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginVertical: 20,
-    
-  },
-  header: {
-    width: 300,
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  customText: {
-    fontWeight: "bold",
-    fontSize: 15,
-  },
-  cardContainer: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    flexWrap: "wrap",
-    marginVerticalr: 20,
-  },
-  card: {
-    width: 89,
-    height: 90,
-    alignItems: "center",
-  },
-  img: {
-    width: 50,
-    height: 50,
-    borderRadius: 15,
-  },
-  name: {
-    fontSize: 12,
-    color: "#6A6A6A",
-    marginTop: 5,
-  },
-});

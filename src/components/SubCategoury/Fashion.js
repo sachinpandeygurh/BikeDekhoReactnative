@@ -1,9 +1,10 @@
-import { Image, ScrollView, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { AntDesign } from "@expo/vector-icons";
 import styles from './Style'
+
 import React from 'react'
 
-export default function Mobile() {
+export default function Fashion() {
     const categoryItems = [
         { id: 1, img: require("../../img/mobile_catg.jpg"), name: "Mobile" },
         { id: 8, img: require("../../img/sport.jpg"), name: "Sports" },
@@ -17,7 +18,7 @@ export default function Mobile() {
   return (
     <View style={styles.container}>
     <View style={styles.header}>
-      <Text style={styles.customText}>Mobile</Text>
+      <Text style={styles.customText}>Fashion</Text>
       <Text style={styles.customText}>
         <AntDesign name="down" size={24} color="black" />
       </Text>
@@ -41,14 +42,14 @@ export default function Mobile() {
 
 // const styles = StyleSheet.create({
     
-  // container: {
-  //   backgroundColor: "#fff",
-  //   paddingVertical: 15,
-  //   flex: 1,
-  //   flexDirection: "column",
-  //   alignItems: "center",
-  //   justifyContent: "space-between",
-  //   marginVertical: 20,
+//   container: {
+//     backgroundColor: "#fff",
+//     paddingVertical: 15,
+//     flex: 1,
+//     flexDirection: "column",
+//     alignItems: "center",
+//     justifyContent: "space-between",
+//     // marginVertical: 20,
     
 //   },
 //   header: {
